@@ -1,14 +1,14 @@
 name: ArtHobbies Stock Checker
 on:
-workflow_dispatch:
-schedule:
-- cron: ‘0 */6 * * *’
+  workflow_dispatch:
+  schedule:
+      - cron: 0 */6 * * *
 
 jobs:
-check-stock:
-runs-on: ubuntu-latest
-steps:
-- name: Get checker code
-uses: actions/checkout@v4
-- name: Run stock checker
-run: python check_stock.py
+  check-stock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get checker code
+        uses: actions/checkout@v4
+      - name: Run stock checker
+        run: python check_stock.py
